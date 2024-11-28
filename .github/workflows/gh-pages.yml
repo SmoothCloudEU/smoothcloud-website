@@ -5,6 +5,10 @@ on:
     branches:
       - master  # Oder der Branch, den du für die Bereitstellung verwenden möchtest
 
+permissions:
+  contents: write  # Ermöglicht das Pushen von Änderungen (z. B. zu gh-pages)
+  pages: write
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
