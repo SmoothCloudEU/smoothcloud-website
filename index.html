@@ -1,4 +1,70 @@
 <!DOCTYPE html>
-<html>
-  <script>window.open("https://discord.gg/N6ZfaZt4NW", "_self")</script>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="languageTitle">SmoothCloudServices</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://cdn.smoothcloudservices.eu/image/logo/1024x1024.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="language-show">
+      <img id="current-language" src="data/american.png" />
+    </div>
+    <div class="language-select">
+      <div>
+        <img src="data/american.png" onclick="changeLanguage('en');" />
+      </div>
+      <div>
+        <img src="data/german.png" onclick="changeLanguage('de');" />
+      </div>
+      <div>
+        <img src="data/france.png" onclick="changeLanguage('fr');" />
+      </div>
+      <div>
+        <img src="data/spain.png" onclick="changeLanguage('es');" />
+      </div>
+      <div>
+        <img src="data/russian.png" onclick="changeLanguage('ru');" />
+      </div>
+    </div>
+    <div class="overlay">
+      <img src="https://cdn.smoothcloudservices.eu/image/logo/1024x1024.png" />
+      <h1>
+        <span class="large" id="pageTitle"
+          >Welcome to SmoothCloud!</span
+        >
+      </h1>
+      <p id="wartungsText">
+        This Site is currently in maintenance. Please try again later!
+      </p>
+    </div>
+    <div>
+      <button
+        class="logo-github"
+        onclick="window.open('https://github.com/SmoothCloudServices', '_blank')"
+      >
+        <img
+          src="https://cdn.smoothcloudservices.eu/image/social/github.png"
+          alt="Logo"
+          class="logo"
+        />
+      </button>
+      <button
+        class="logo-discord"
+        onclick="window.open('https://discord.smoothcloudservices.eu/', '_blank')"
+      >
+        <img
+          src="https://cdn.smoothcloudservices.eu/image/social/discord.png"
+          alt="Logo"
+          class="logo"
+        />
+      </button>
+    </div>
+    <script src="translate.js"></script>
+  </body>
 </html>
