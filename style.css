@@ -76,28 +76,7 @@ body {
   width: 45px;
 }
 
-.logo-github {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #27B8D9;
-  color: #ffffff;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
-}
-
-.logo-github:hover {
-  background-color: #26899f;
-}
-.logo-discord {
+.icons {
   position: absolute;
   bottom: 20px;
   right: 20px;
@@ -105,25 +84,30 @@ body {
   align-items: center;
   justify-content: center;
   padding: 10px 20px;
-  background-color: #27B8D9;
   color: #ffffff;
-  border: none;
-  border-radius: 5px;
   font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
   margin-top: 10px;
 }
 
-.logo-discord:hover {
-  background-color: #26899f;
+.icons .icon {
+  aspect-ratio: 1;
+  height: 50px;
+  width: 70px;
+  margin-left: 10px;
+  background-color: #27b8d9;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.logo {
-  min-width: 45px;
-  max-width: 60px;
-  height: 45px
-  margin-right: 0px;
+.icons .icon:hover {
+  background-color: #279cb7;
+}
+
+.icons .icon .logo {
+  width: 35px;
+  height: 35px;
 }
 
 .large {
