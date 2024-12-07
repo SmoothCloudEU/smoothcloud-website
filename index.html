@@ -4,23 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title id="languageTitle">SmoothCloud</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="data/logo_1x1.png" type="image/png" />
+    <link rel="stylesheet" href="/public/style/home.css" />
+    <link rel="icon" href="/public/image/logo_1x1.png" type="image/png" />
   </head>
   <body>
     <div class="language-show">
-      <img id="current-language" src="data/american.png" />
+      <img id="current-language" src="/public/image/icon/american.png" />
     </div>
     <div class="language-select">
       <div>
-        <img src="data/american.png" onclick="changeLanguage('en');" />
+        <img
+          src="/public/image/icon/american.png"
+          onclick="changeLanguage('en_US');"
+        />
       </div>
       <div>
-        <img src="data/german.png" onclick="changeLanguage('de');" />
+        <img
+          src="/public/image/icon/german.png"
+          onclick="changeLanguage('de_DE');"
+        />
       </div>
     </div>
     <div class="overlay">
-      <img src="data/logo.png" alt="Logo coming soon..." />
+      <img src="/public/image/logo.png" alt="Logo coming soon..." />
       <h1>
         <span class="large" id="pageTitle">Welcome to SmoothCloud!</span>
       </h1>
@@ -33,15 +39,15 @@
         class="icon"
         onclick="window.open('https://github.com/SmoothCloudEU', '_blank')"
       >
-        <img src="data/github.png" alt="Logo" class="logo" />
+        <img src="/public/image/icon/github.png" alt="Logo" class="logo" />
       </button>
       <button
         class="icon"
         onclick="window.open('https://discord.gg/N6ZfaZt4NW', '_blank')"
       >
-        <img src="data/discord.png" alt="Logo" class="logo" />
+        <img src="/public/image/icon/discord.png" alt="Logo" class="logo" />
       </button>
     </div>
-    <script src="translate.js"></script>
+    <script src="/public/javascript/translate.js"></script>
   </body>
 </html>
