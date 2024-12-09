@@ -64,6 +64,7 @@ header nav .highlighted {
   cursor: pointer;
 }
 
-header nav:last-child {
-  margin-right: 130px;
+header #current-language-icon {
+  margin: 0 130px 0 20px;
+  width: 50px;
 }
