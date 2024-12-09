@@ -3,51 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="languageTitle">SmoothCloud</title>
+    <title id="languageTitle">SmoothCloud: Welcome</title>
     <link rel="stylesheet" href="/public/style/home.css" />
     <link rel="icon" href="/public/image/logo_1x1.png" type="image/png" />
   </head>
   <body>
-    <div class="language-show">
-      <img id="current-language" src="/public/image/icon/american.png" />
-    </div>
-    <div class="language-select">
-      <div>
-        <img
-          src="/public/image/icon/american.png"
-          onclick="changeLanguage('en_US');"
-        />
+    <header>
+      <div onclick="window.open('/', '_self')">
+        <img id="header-logo" src="/public/image/logo_1x1.png" alt="" />
+        <p>SmoothCloud</p>
       </div>
-      <div>
-        <img
-          src="/public/image/icon/german.png"
-          onclick="changeLanguage('de_DE');"
-        />
-      </div>
-    </div>
-    <div class="overlay">
-      <img src="/public/image/logo.png" alt="Logo coming soon..." />
-      <h1>
-        <span class="large" id="pageTitle">Welcome to SmoothCloud!</span>
-      </h1>
-      <p id="wartungsText">
-        This Site is currently in maintenance. Please try again later!
-      </p>
-    </div>
-    <div class="icons">
-      <button
-        class="icon"
-        onclick="window.open('https://github.com/SmoothCloudEU', '_blank')"
-      >
-        <img src="/public/image/icon/github.png" alt="Logo" class="logo" />
-      </button>
-      <button
-        class="icon"
-        onclick="window.open('https://discord.gg/N6ZfaZt4NW', '_blank')"
-      >
-        <img src="/public/image/icon/discord.png" alt="Logo" class="logo" />
-      </button>
-    </div>
+      <nav>
+        <a class="link" href="#features">Features</a>
+        <a class="link" href="#faq">FAQ</a>
+        <a class="link" href="https://docs.smoothcloud.eu">Documentation</a>
+        <a class="link" href="/download">Download</a>
+        <a
+          class="link highlighted"
+          href="https://docs.smoothcloud.eu/getting-started"
+          >Getting Started</a
+        >
+      </nav>
+    </header>
+    <main></main>
+    <footer></footer>
     <script src="/public/javascript/translate.js"></script>
   </body>
 </html>
