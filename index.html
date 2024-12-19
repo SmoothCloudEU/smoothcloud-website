@@ -1,47 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="/image/logo_1x1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="languageTitle">SmoothCloud</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="data/logo_1x1.png" type="image/png" />
+    <title>SmoothCloud</title>
   </head>
   <body>
-    <div class="language-show">
-      <img id="current-language" src="data/american.png" />
-    </div>
-    <div class="language-select">
-      <div>
-        <img src="data/american.png" onclick="changeLanguage('en');" />
-      </div>
-      <div>
-        <img src="data/german.png" onclick="changeLanguage('de');" />
-      </div>
-    </div>
-    <div class="overlay">
-      <img src="data/logo.png" alt="Logo coming soon..." />
-      <h1>
-        <span class="large" id="pageTitle">Welcome to SmoothCloud!</span>
-      </h1>
-      <p id="wartungsText">
-        This Site is currently in maintenance. Please try again later!
-      </p>
-    </div>
-    <div class="icons">
-      <button
-        class="icon"
-        onclick="window.open('https://github.com/SmoothCloudEU', '_blank')"
-      >
-        <img src="data/github.png" alt="Logo" class="logo" />
-      </button>
-      <button
-        class="icon"
-        onclick="window.open('https://discord.gg/N6ZfaZt4NW', '_blank')"
-      >
-        <img src="data/discord.png" alt="Logo" class="logo" />
-      </button>
-    </div>
-    <script src="translate.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
