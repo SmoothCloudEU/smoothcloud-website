@@ -1,0 +1,25 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - master  # Oder der Branch, den du für die Bereitstellung verwenden möchtest
+
+permissions:
+  contents: write  # Ermöglicht das Pushen von Änderungen (z. B. zu gh-pages)
+  pages: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Deploy HTML file to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./  # Verzeichnis, das die HTML-Datei enthält (falls im Root-Verzeichnis, benutze ./)
+        cname: smoothcloud.eu  # Deine eigene Domain
