@@ -1,42 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="/image/logo_1x1.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="languageTitle">SmoothCloud: Welcome</title>
-    <link rel="stylesheet" href="/public/style/home.css" />
-    <link rel="icon" href="/public/image/logo_1x1.png" type="image/png" />
+    <title>SmoothCloud</title>
   </head>
   <body>
-    <header>
-      <div onclick="window.open('/', '_self')">
-        <img id="header-logo" src="/public/image/logo_1x1.png" alt="" />
-        <p>SmoothCloud</p>
-      </div>
-      <div>
-        <nav>
-          <a class="link" href="#features">Features</a>
-          <a class="link" href="#faq">FAQ</a>
-          <a class="link" href="/docs">Documentation</a>
-          <a class="link" href="/download">Download</a>
-          <a
-            class="link highlighted"
-            href="https://docs.smoothcloud.eu/getting-started"
-            >Getting Started</a
-          >
-        </nav>
-        <div>
-          <img
-            id="current-language-icon"
-            src="/public/image/icon/american.png"
-            alt=""
-          />
-          <div id="language-select"></div>
-        </div>
-      </div>
-    </header>
-    <main></main>
-    <footer></footer>
-    <script src="/public/javascript/translate.js"></script>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
