@@ -33,7 +33,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #1b203e;
+  background-color: #15192f;
 }
 
 header > div {
