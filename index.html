@@ -1,47 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="languageTitle">SmoothCloud</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="data/logo_1x1.png" type="image/png" />
-  </head>
-  <body>
-    <div class="language-show">
-      <img id="current-language" src="data/american.png" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title id="languageTitle">SmoothCloud</title>
+  <meta id="metaDescription" name="description" content="SmoothCloud - currently under maintenance." />
+  <meta name="theme-color" content="#06080d" />
+  <link rel="icon" href="data/logo_1x1.png" type="image/png" />
+  <link rel="preload" as="image" href="data/logo.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <noscript>
+    <style>
+      .lang-suggestion,.geo-consent {display:none!important;}
+      .no-js-note {margin-top:1rem;font-size:.75rem;color:#f5c17d;}
+    </style>
+  </noscript>
+</head>
+<body>
+  <!-- Bubble Side Columns -->
+  <div class="bubbles bubbles-left" aria-hidden="true"></div>
+  <div class="bubbles bubbles-right" aria-hidden="true"></div>
+
+  <!-- Language Switcher -->
+  <nav class="language-switcher" aria-label="Language selection">
+    <ul>
+      <li>
+        <button type="button" class="lang-btn" data-lang="en" aria-pressed="true">
+          <img src="data/american.png" alt="" role="presentation" />
+          <span>English</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="lang-btn" data-lang="de" aria-pressed="false">
+          <img src="data/german.png" alt="" role="presentation" />
+          <span>Deutsch</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">
+          <span class="flag-fallback">FR</span><span>Français</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="lang-btn" data-lang="es" aria-pressed="false">
+          <span class="flag-fallback">ES</span><span>Español</span>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="lang-btn" data-lang="it" aria-pressed="false">
+          <span class="flag-fallback">IT</span><span>Italiano</span>
+        </button>
+      </li>
+      <!-- Weitere Sprachen nach Bedarf -->
+    </ul>
+  </nav>
+
+  <!-- Geolocation Consent -->
+  <div class="geo-consent" id="geoConsent" hidden role="dialog" aria-modal="false" aria-live="polite">
+    <p data-i18n="geo_consent_text">
+      May we detect your approximate country (IP-based) to suggest a better language? No precise location is used.
+    </p>
+    <div class="geo-actions">
+      <button type="button" id="geoAccept" data-i18n="yes">Yes</button>
+      <button type="button" id="geoDecline" data-i18n="no">No</button>
     </div>
-    <div class="language-select">
-      <div>
-        <img src="data/american.png" onclick="changeLanguage('en');" />
-      </div>
-      <div>
-        <img src="data/german.png" onclick="changeLanguage('de');" />
-      </div>
+  </div>
+
+  <!-- Language Suggestion Banner -->
+  <div class="lang-suggestion" id="langSuggestion" hidden aria-live="polite">
+    <span id="langSuggestionText"></span>
+    <div class="suggest-actions">
+      <button type="button" id="suggestApply" data-i18n="apply">Apply</button>
+      <button type="button" id="suggestKeep" data-i18n="keep_current">Keep current</button>
     </div>
-    <div class="overlay">
-      <img src="data/logo.png" alt="Logo coming soon..." />
-      <h1>
-        <span class="large" id="pageTitle">Welcome to SmoothCloud!</span>
-      </h1>
-      <p id="wartungsText">
-        This Site is currently in maintenance. Please try again later!
-      </p>
-    </div>
-    <div class="icons">
-      <button
-        class="icon"
-        onclick="window.open('https://github.com/SmoothCloudEU', '_blank')"
-      >
-        <img src="data/github.png" alt="Logo" class="logo" />
-      </button>
-      <button
-        class="icon"
-        onclick="window.open('https://discord.gg/N6ZfaZt4NW', '_blank')"
-      >
-        <img src="data/discord.png" alt="Logo" class="logo" />
-      </button>
-    </div>
-    <script src="translate.js"></script>
-  </body>
+  </div>
+
+  <!-- Main Content -->
+  <main class="overlay" role="main">
+    <img src="data/logo.png" alt="SmoothCloud Logo" width="160" height="160" />
+    <h1 class="coming-soon" id="pageTitle" data-i18n="title">Welcome to SmoothCloud!</h1>
+    <p class="subline" id="wartungsText" data-i18n="maintenance_text">
+      This site is currently in maintenance. Please try again later!
+    </p>
+    <p class="no-js-note" aria-hidden="true">JavaScript disabled: language & dynamic features limited.</p>
+  </main>
+
+  <!-- External Links -->
+  <div class="icons" aria-label="External links">
+    <button class="icon" aria-label="GitHub" onclick="window.open('https://github.com/SmoothCloudEU','_blank')">
+      <img src="data/github.png" alt="" class="logo" />
+    </button>
+    <button class="icon" aria-label="Discord" onclick="window.open('https://discord.gg/N6ZfaZt4NW','_blank')">
+      <img src="data/discord.png" alt="" class="logo" />
+    </button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="translate.js" defer></script>
+  <script src="i18n.js" defer></script>
+  <script src="bubbles.js" defer></script>
+</body>
 </html>
