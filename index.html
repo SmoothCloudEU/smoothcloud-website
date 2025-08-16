@@ -1,47 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title id="languageTitle">SmoothCloud</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>SmoothCloud - Wir starten bald</title>
+    <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="data/logo_1x1.png" type="image/png" />
   </head>
   <body>
-    <div class="language-show">
-      <img id="current-language" src="data/american.png" />
-    </div>
-    <div class="language-select">
-      <div>
-        <img src="data/american.png" onclick="changeLanguage('en');" />
-      </div>
-      <div>
-        <img src="data/german.png" onclick="changeLanguage('de');" />
-      </div>
-    </div>
-    <div class="overlay">
-      <img src="data/logo.png" alt="Logo coming soon..." />
-      <h1>
-        <span class="large" id="pageTitle">Welcome to SmoothCloud!</span>
-      </h1>
-      <p id="wartungsText">
-        This Site is currently in maintenance. Please try again later!
-      </p>
-    </div>
-    <div class="icons">
-      <button
-        class="icon"
-        onclick="window.open('https://github.com/SmoothCloudEU', '_blank')"
-      >
-        <img src="data/github.png" alt="Logo" class="logo" />
-      </button>
-      <button
-        class="icon"
-        onclick="window.open('https://discord.gg/N6ZfaZt4NW', '_blank')"
-      >
-        <img src="data/discord.png" alt="Logo" class="logo" />
-      </button>
-    </div>
-    <script src="translate.js"></script>
+    <main class="hero" role="main">
+      <header class="branding">
+        <h1 class="logo">
+          <span class="logo-accent">Smooth</span>Cloud
+        </h1>
+        <p class="tagline">Etwas Großes schwebt heran.</p>
+      </header>
+      <section class="message">
+        <h2 class="coming-soon">Wir starten bald</h2>
+        <p class="subline">
+          Bleib auf dem Laufenden – trag dich ein und wir pingen dich an, sobald wir live sind.
+        </p>
+        <form class="notify-form" action="#" method="post" novalidate>
+          <label class="visually-hidden" for="email">E-Mail-Adresse</label>
+          <input id="email" name="email" type="email" placeholder="deine@email.de" autocomplete="email" required>
+          <button type="submit">Benachrichtigen</button>
+          <p class="form-feedback" aria-live="polite"></p>
+        </form>
+      </section>
+      <footer class="meta">
+        <p>&copy; <span id="year"></span> SmoothCloud. Alle Rechte vorbehalten.</p>
+      </footer>
+    </main>
+    <div class="bubbles bubbles-left" aria-hidden="true"></div>
+    <div class="bubbles bubbles-right" aria-hidden="true"></div>
+    <script src="script.js" defer></script>
   </body>
 </html>
